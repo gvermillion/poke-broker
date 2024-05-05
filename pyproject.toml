@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pokebroker"
+authors = [{ name = "Grant Vermillion", email = "grant.w.vermillion@gmail.com" }]
+license = { text = "" }
+urls = { Homepage = "https://vermillion.world" }
+requires-python = ">=3.8, <3.9"
+dynamic = ["version", "dependencies", "optional-dependencies"]
+
+[tool.setuptools.dynamic]
+version = { attr = "pokebroker.__version__" }
+dependencies = { file = "requirements.txt" }
+
+# [tool.setuptools.dynamic.optional-dependencies]
+# dev = { file = "requirements-dev.txt" }
+# test = { file = "requirements-test.txt" }
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["pokebroker*"]
+namespaces = false
+
+#[project.scripts]
+#pokerbroker = "pokebroker.cli.cli:entrypoint"
+
+[tool.pytest.ini_options]
+addopts = "-p no:warnings"
+pythonpath = [
+    "pokebroker"
+]

@@ -1,0 +1,7 @@
+clip @ git+https://github.com/openai/CLIP.git@a1d071733d7111c9c014f024669f959182114e33
+panel==1.2.3
+plotnine==0.12.4
+pokemontcgsdk==3.4.0
+polars==0.20.21
+torch==2.2.2
+torchvision==0.17.2
