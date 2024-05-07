@@ -1,7 +1,7 @@
 from pyarrow import parquet as pq
 import polars as pl
 
-from pokebroker.utils import logger
+from pokebroker import logger
 
 class IO:
 
